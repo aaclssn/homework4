@@ -63,8 +63,8 @@ nav a:hover, nav a:focus {
 
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
-nav a:focus{
-    border: 2px solid black;
+nav a:focus {
+  border: 2px solid black;
 }
 
 nav{
@@ -85,6 +85,10 @@ footer{
 
 .container{
   /*Your Code Here*/
+  display:grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
 }
 
 header{
@@ -97,8 +101,8 @@ header{
 
   /*Your Code Here*/
   /*Set background-image to header.jpg */
- 
-
+  background-image: url("header.jpg");
+  
   grid-column: 1 / -1;  /*Can you explain what this does?*/
   grid-row: 1 / auto;   /*Can you rewrite it?*/
 }
@@ -112,12 +116,13 @@ header p{
 
 .about, .method, .clients, .contact{
   /*Your Code Here*/
-
+  grid-column: 2/ span 1;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
   /*Your Code Here*/
-
+  grid-column: 1/ span 3;
+  max-height: 700px;
 }
 
 .about, .about-image{
