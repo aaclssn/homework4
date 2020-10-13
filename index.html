@@ -1,72 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>New Company Inc.</title>
-  </head>
-  <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#method">Method</a></li>
-          <li><a href="#clients">Clients</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    <main class="container">
-      
-    <header id="main">
-      <h1>New Company Inc.</h1>
-      <p>Creating a better workspace by transforming the office paradigm. We're helping employees make their mark on the world through effictive workspace management.</p>
-    </header>
-    
-    <div class="about-image">
-      <img src="images/about.jpg" alt=""/>
-    </div>
-    
-    <div class="about text-block">
-      <a id="about"></a>
-      <h2>About</h2>
-      <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam pulvinar euismod dolor, eu aliquam nibh efficitur vel. Phasellus sit amet velit congue, finibus nibh eu, ultricies magna. Donec eu ultrices eros. Donec sit amet metus nisi. Nulla tincidunt justo non risus aliquam, sit amet lacinia lacus commodo. Aliquam ultricies ante sed semper porta. Integer eros tortor, convallis eu ultricies malesuada, fringilla sed libero. Aenean molestie rhoncus leo eu imperdiet. Mauris eget molestie massa. Maecenas auctor sapien a arcu laoreet, et consectetur odio scelerisque. Praesent ac turpis sed neque porttitor finibus faucibus quis tortor. Morbi tempus turpis lacus, nec laoreet tellus rhoncus quis. Aliquam vitae dolor urna. In pellentesque ullamcorper turpis, commodo cursus mauris condimentum eget.</p>
-    </div>
+html{
+    scroll-behavior: smooth;
+}
 
-    <div class="method-image">
-      <img src="images/method.jpg" alt=""/>
-    </div>
+body{
+  background-color: #737373;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
 
-    <div class="method text-block">
-      <a id="method"></a>
-      <h2>Method</h2>
-      <p>Praesent eu lorem sed eros pellentesque tincidunt. Duis nec dapibus dui. Curabitur cursus dapibus lectus, at molestie ipsum hendrerit eget. Aliquam magna ipsum, gravida et ligula id, tincidunt facilisis arcu. In blandit, magna a pretium mollis, mauris odio cursus eros, tempor rutrum diam est non enim. Nunc porttitor imperdiet placerat. Mauris aliquam, purus nec viverra placerat, ipsum est sollicitudin ipsum, vel lacinia justo justo rutrum libero.</p>
-    </div>
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
 
-    <div class="clients-image">
-      <img src="images/clients.jpg" alt=""/>
-    </div>
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
 
-    <div class="clients text-block">
-      <a id="clients"></a>
-      <h2>Clients</h2>
-      <p>Nullam accumsan efficitur accumsan. Nunc arcu ante, iaculis nec leo vel, iaculis cursus odio. Vestibulum at elit eu nisi finibus placerat ac a lorem. Donec congue iaculis quam, non tempor ipsum accumsan et. Duis risus tellus, maximus sit amet varius pulvinar, faucibus in orci. Morbi ac placerat lectus. Sed leo augue, fringilla eu viverra auctor, dapibus vitae odio. Quisque non porttitor sem, vitae dictum tortor. Maecenas interdum sollicitudin mattis. Pellentesque accumsan elit eget placerat finibus. Phasellus eget elit quis est mattis porta non non metus. Pellentesque lacus dui, tempor ac elit at, convallis ultricies velit. Fusce viverra dui dui, vitae feugiat erat ornare sit amet. Maecenas diam ligula, venenatis id dignissim et, convallis non tellus. Aenean vehicula laoreet vehicula.</p>
-    </div>
+nav li{
+  display:inline;
+  padding-right:20px;
 
-    <div class="contact-image">
-      <img src="images/contact.jpg" alt =""/>
-    </div>
+}
 
-    <div class="contact text-block">
-      <a id="contact"></a>
-      <h2>Contact</h2>
-      <p>Etiam dolor ex, vehicula nec augue in, lobortis volutpat turpis. Pellentesque vel vestibulum metus. Nam luctus porta sapien a malesuada. Nunc porttitor imperdiet placerat. Mauris aliquam, purus nec viverra placerat, ipsum est sollicitudin ipsum, vel lacinia justo justo rutrum libero.</p>
-    </div>
-  </main>
-    <footer>
-      <p>University of Michigan School of Information <br/>
-        &copy; Colleen van Lent, Drew Asselin - Web Design 2019-2020</p>
-    </footer>
-  </body>
-</html>
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+/*Your Code Here*/
+/*Write selector/rule property to add an underline when
+links in the navigation are in the hover or focus state.*/
+
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
+
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  /*Your code here*/
+  position:absolute; 
+  top: -40px;
+}
+
+/*Your Code Here*/
+/*Write selector/rule property to position the skip class element*/
+.skip a:focus{
+  top:0px
+}
+
+/*Your Code Here*/
+/*Write selector/rule property to style all elements when in focus*/
+nav a:focus {
+  border: 2px solid black;
+}
+
+nav{
+  background-color: #ddd;
+  padding: 25px 0; 
+  text-align: left;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+
+
+.container{
+  /*Your Code Here*/
+  display:grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  /*Your Code Here*/
+  /*Set background-image to header.jpg */
+  background-image: url("header.jpg");
+  background-repeat: no-repeat;
+
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 1 / -1;   /*Can you rewrite it?*/
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about, .method, .clients, .contact{
+  /*Your Code Here*/
+  grid-column: 2/ span 1;
+}
+
+.about-image, .method-image, .clients-image, .contact-image{
+  /*Your Code Here*/
+  grid-column: 1/ span 3;
+  max-height: 700px;
+}
+
+.about, .about-image{
+   /*Your Code Here*/
+
+}
+
+.method, .method-image{
+   /*Your Code Here*/
+
+}
+
+
+.clients, .clients-image{
+    /*Your Code Here*/
+
+}
+
+
+.contact, .contact-image{
+    /*Your Code Here*/
+
+}
+
+.text-block{
+background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+  /*Your code here:*/
+
+}
+
+
+@media all and (min-width: 800px){
+  nav{
+    padding: 30px 0px;
+    /*Your code here:*/
+  }
+
+  .container{
+    /*Your code here:*/
+  }
+
+  .about, .clients, .method-image, .contact-image{
+    /*Your code here:*/
+  }
+
+  .about-image, .clients-image, .method, .contact{
+    /*Your code here:*/
+  }
+}
+
+/*You do not need to modify any code below this line.
+It is included for accessibility to turn off animations
+and movement for people who have modified their 
+preferences to reduce motion.*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
