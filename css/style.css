@@ -104,7 +104,7 @@ header{
   background-image: url("header.jpg");
   
   grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 1 / auto;   /*Can you rewrite it?*/
+  grid-row: 1 / -1;   /*Can you rewrite it?*/
 }
 
 header p{
@@ -123,27 +123,28 @@ header p{
   /*Your Code Here*/
   grid-column: 1/ span 3;
   max-height: 700px;
+  overflow: hidden;
 }
 
 .about, .about-image{
-   /*Your Code Here*/
+   grid-row: 2;
 
 }
 
 .method, .method-image{
-   /*Your Code Here*/
+   grid-row: 3;
 
 }
 
 
 .clients, .clients-image{
-    /*Your Code Here*/
+   grid-row: 4;
 
 }
 
 
 .contact, .contact-image{
-    /*Your Code Here*/
+    grid-row: 5;
 
 }
 
